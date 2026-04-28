@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --dark: #111111;
+  --cream: #f3efe7;
+  --muted: #b9b1a5;
+  --text: #1d1b18;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: Inter, sans-serif;
+}
+
+h1, h2, h3, .logo {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+}
+
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.65)),
+    url('hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+  padding: 24px 7vw;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: .18em;
+}
+
+nav a { color: white; text-decoration: none; opacity: .85; }
+
+.logo {
+  font-size: 22px;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+
+.hero-content {
+  position: absolute;
+  left: 7vw;
+  bottom: 16vh;
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-size: clamp(64px, 12vw, 160px);
+  line-height: .78;
+  margin: 16px 0;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 18px;
+  max-width: 540px;
+  line-height: 1.6;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .22em;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 13px 22px;
+  border: 1px solid currentColor;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.light { color: white; }
+.dark-button { color: white; }
+
+.dark {
+  background: var(--dark);
+  color: white;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 70px;
+  padding: 120px 10vw;
+  align-items: center;
+}
+
+.portrait-card {
+  min-height: 520px;
+  background: url('portrait.jpg') center/cover;
+  filter: grayscale(100%);
+}
+
+.intro h2, .statement h2, .programs h2, .contact h2 {
+  font-size: clamp(46px, 7vw, 108px);
+  line-height: .9;
+  margin: 12px 0 28px;
+}
+
+em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.intro p, .statement p, .contact p {
+  line-height: 1.75;
+  max-width: 590px;
+  color: #d9d3ca;
+}
+
+.light {
+  background: var(--cream);
+  color: var(--text);
+}
+
+.statement {
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+  gap: 80px;
+  padding: 120px 10vw;
+  align-items: center;
+}
+
+.statement p { color: #4b4740; }
+
+.photo-frame {
+  min-height: 480px;
+  border: 1px solid #ccc3b7;
+  background:
+    linear-gradient(rgba(245,241,232,.15), rgba(245,241,232,.15)),
+    url('portrait2.jpg') center/cover;
+  filter: grayscale(100%);
+}
+
+.signature {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  margin-top: 34px;
+  font-style: italic;
+}
+
+.programs {
+  padding: 110px 10vw 130px;
+  text-align: center;
+}
+
+.programs h2 { margin-bottom: 70px; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 42px;
+  text-align: left;
+}
+
+article {
+  border-left: 1px solid #c9c1b7;
+  padding-left: 34px;
+}
+
+.mini-img {
+  height: 150px;
+  margin-bottom: 25px;
+  filter: grayscale(100%);
+  background-size: cover;
+  background-position: center;
+}
+
+.one { background-image: url('card1.jpg'); }
+.two { background-image: url('card2.jpg'); }
+.three { background-image: url('card3.jpg'); }
+
+article span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  color: #8d857b;
+}
+
+article h3 {
+  display: inline;
+  font-size: 30px;
+}
+
+article p {
+  line-height: 1.65;
+  color: #5c574f;
+  min-height: 105px;
+}
+
+article a {
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  font-size: 11px;
+}
+
+.review {
+  padding: 110px 10vw;
+}
+
+.review h2 {
+  font-size: clamp(72px, 12vw, 180px);
+  text-transform: uppercase;
+  color: rgba(255,255,255,.08);
+  margin: 0;
+}
+
+blockquote {
+  max-width: 760px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  line-height: 1.25;
+  margin: -55px 0 0 auto;
+}
+
+.contact {
+  background: #1b1b1b;
+  color: white;
+  text-align: center;
+  padding: 120px 8vw;
+}
+
+.contact p { margin: auto; }
+
+@media (max-width: 800px) {
+  nav { flex-wrap: wrap; justify-content: center; }
+  .intro, .statement, .cards { grid-template-columns: 1fr; }
+  .hero-content { position: relative; left: auto; bottom: auto; padding-top: 28vh; }
+  .intro, .statement, .programs, .review, .contact { padding: 80px 6vw; }
+}
